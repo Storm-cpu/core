@@ -1,8 +1,8 @@
 package main
 
 import (
-	"money-note/config"
-	"money-note/pkg/server"
+	"core/config"
+	"core/pkg/server"
 	"net/http"
 
 	"github.com/labstack/echo/v4"

@@ -1,7 +1,7 @@
 package dbutil
 
 import (
-	"money-note/config"
+	"core/config"
 	"sync"
 	"testing"
 

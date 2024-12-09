@@ -1,9 +1,9 @@
 package dbutil
 
 import (
+	"core/config"
 	"fmt"
 	"log"
-	"money-note/config"
 	"sync"
 
 	"gorm.io/driver/postgres"

@@ -1,9 +1,10 @@
 package main
 
 import (
-	"core/config"
-	"core/pkg/server"
 	"net/http"
+
+	"github.com/Storm-cpu/core/config"
+	"github.com/Storm-cpu/core/pkg/server"
 
 	"github.com/labstack/echo/v4"
 )

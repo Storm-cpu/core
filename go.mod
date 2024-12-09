@@ -1,4 +1,4 @@
-module core
+module github.com/Storm-cpu/core
 
 go 1.23.1
 

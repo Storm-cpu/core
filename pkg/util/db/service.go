@@ -1,10 +1,11 @@
 package dbutil
 
 import (
-	"core/config"
 	"fmt"
 	"log"
 	"sync"
+
+	"github.com/Storm-cpu/core/config"
 
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"

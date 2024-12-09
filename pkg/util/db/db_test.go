@@ -1,9 +1,10 @@
 package dbutil
 
 import (
-	"core/config"
 	"sync"
 	"testing"
+
+	"github.com/Storm-cpu/core/config"
 
 	"github.com/stretchr/testify/assert"
 	"gorm.io/gorm"

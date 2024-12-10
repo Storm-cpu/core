@@ -4,6 +4,8 @@ go 1.23.1
 
 require (
 	github.com/go-playground/validator/v10 v10.23.0
+	github.com/imdatngo/gowhere v1.1.3
+	github.com/imdatngo/mergo v0.3.12
 	github.com/joho/godotenv v1.5.1
 	github.com/labstack/echo/v4 v4.13.0
 	github.com/stretchr/testify v1.10.0

@@ -19,7 +19,7 @@ func mockConfig() config.Configuration {
 func TestConnectDB(t *testing.T) {
 	cfg := mockConfig()
 
-	db := ConnectDB(cfg)
+	db := ConnectDB(cfg.DbPsn)
 
 	assert.NotNil(t, db, "Database connection should not be nil")
 
@@ -38,10 +38,10 @@ func TestConnectDBSingleton(t *testing.T) {
 
 	go func() {
 		defer wg.Done()
-		db1 = ConnectDB(cfg)
+		db1 = ConnectDB(cfg.DbPsn)
 	}()
 
-	db2 = ConnectDB(cfg)
+	db2 = ConnectDB(cfg.DbPsn)
 
 	wg.Wait()
 

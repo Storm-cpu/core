@@ -5,8 +5,6 @@ import (
 	"log"
 	"sync"
 
-	"github.com/Storm-cpu/core/config"
-
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 )
@@ -17,7 +15,7 @@ var (
 	lock     sync.Mutex
 )
 
-func ConnectDB(cfg config.Configuration) *gorm.DB {
+func ConnectDB(connectionString string) *gorm.DB {
 	lock.Lock()
 	defer lock.Unlock()
 
@@ -27,7 +25,7 @@ func ConnectDB(cfg config.Configuration) *gorm.DB {
 	}
 
 	var err error
-	db, err = gorm.Open(postgres.Open(cfg.DbPsn), &gorm.Config{})
+	db, err = gorm.Open(postgres.Open(connectionString), &gorm.Config{})
 	if err != nil {
 		log.Fatalf("Failed to connect to the database: %v", err)
 	}

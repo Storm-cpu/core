@@ -83,7 +83,7 @@ func (cdb *DB) List(db *gorm.DB, output interface{}, lq *ListQueryCondition, cou
 			}
 		}
 
-		if lq.Sort != nil && len(lq.Sort) > 0 {
+		if len(lq.Sort) > 0 {
 			//Note: It's up to who using this package to validate the sort fields!
 			db = db.Order(strings.Join(lq.Sort, ", "))
 		}
